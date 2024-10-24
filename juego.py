@@ -12,5 +12,17 @@ class Juego():
             
         
 
+    def eleccion(self):
+
+        self.mostrar_menu()
+
+        eleccion = int(input("Elije tu siguiente movimiento: "))
+
+        while(eleccion > 4 or eleccion < 1):
+            print("Eleccion incorrecta, por favor elige")
+
+            self.mostrar_menu()
+        
+            eleccion = int(input("Elije tu siguiente movimiento: "))
 
         
