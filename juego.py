@@ -1,8 +1,16 @@
-import monstruo
+class Juego():
 
-vibora = monstruo.Vibora("Viki", 100, 5, 5, 10,10)
-vibora2 = monstruo.Vibora("Fefito", 100, 5, 6, 7, 5)
+    def __init__(self):
+        self.turn = 0 # si turno es par le toca al jugador, caso contrario a la compu 
 
-print(f"{vibora2.name} enveneno a {vibora.name}")
-vibora2.envenenar(vibora)
-print(f"{vibora.estado}")
+    def combate(self, participante1, participante2):
+        if participante1.velocidad < participante2.velocidad: self.turn = 1
+
+        while True:
+            if self.turn % 2 == 0:
+                participante1.eleccion()
+            
+        
+
+
+        
